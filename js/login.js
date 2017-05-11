@@ -2,7 +2,6 @@ $(document).ready(function () {
   // Facebook login
   $("body").on("click", ".btn-fb", function () {
     FB.login(function(response) {
-      console.log("test");
       if (response.authResponse) {
         FB.api('/me?fields=id,name,email', function(response) {
           var value = JSON.stringify(response);

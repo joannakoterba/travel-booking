@@ -14,7 +14,6 @@ $(document).ready(function () {
 
   $("body").on("click", ".logout", function (e) {
     e.preventDefault();
-    console.log('test');
     $.removeCookie('cookieData');
     $(".logged").addClass("hidden");
     $(".login").removeClass("hidden");
