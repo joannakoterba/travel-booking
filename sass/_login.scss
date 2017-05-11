@@ -1,0 +1,28 @@
+.navbar.navbar-border {
+  border-bottom: solid 1px #F1F1F1;
+  min-height: 120px;
+}
+
+.panel-login {
+  .staff-login {
+    font-size: 1.8rem;
+    margin-bottom: 20px;
+  }
+  .register,
+  .login{
+    color:#85D538;
+    font-size: 1.5rem;
+    float: right;
+
+    &:hover {
+      color: #F89406;
+    }
+  }
+
+  .btn-fb {
+    margin-bottom: 20px;
+    color: #fff;
+    background-color: #425F9C;
+    width: 100%;
+  }
+}

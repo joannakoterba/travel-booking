@@ -1,0 +1,56 @@
+{{#login}}
+    <div class="row">
+        <div class="col-md-4 col-md-offset-4">
+            <div class="staff-login">
+                <span class="login-heading">Zaloguj się</span>
+                <a href="#" class="register">
+                    <span>utwórz konto</span>
+                </a>
+            </div>
+            <button class="btn btn-fb">Zaloguj przez Facebook</button>
+            <form class="form-login" method="post">
+                <div class="form-group">
+                    <input type="email" class="form-control" id="loginEmail" placeholder="Email">
+                </div>
+                <div class="form-group">
+                    <input type="password" class="form-control" id="loginPassword" placeholder="Hasło">
+                </div>
+                <div class="checkbox">
+                    <label>
+                        <input type="checkbox"> Pamiętaj mnie
+                    </label>
+                </div>
+                <button type="submit" class="btn btn-light-green btn-login">Zaloguj</button>
+            </form>
+        </div>
+    </div>
+{{/login}}
+
+{{#register}}
+    <div class="row">
+        <div class="col-md-4 col-md-offset-4">
+            <div class="staff-login">
+                <span class="register-heading">Utwórz konto</span>
+                <a href="#" class="login">
+                <span>zaloguj się</span>
+                </a>
+            </div>
+            <form class="form-login" method="post">
+                <div class="form-group">
+                    <input type="text" class="form-control" id="inputName" placeholder="Imię">
+                </div>
+                <div class="form-group">
+                    <input type="text" class="form-control" id="inputLastname" placeholder="Nazwisko">
+                </div>
+                <div class="form-group">
+                    <input type="email" class="form-control" id="inputEmail" placeholder="Email">
+                </div>
+                <div class="form-group">
+                    <input type="password" class="form-control" id="inputPassword" placeholder="Hasło">
+                </div>
+                <button type="submit" class="btn btn-light-green btn-register">Utwórz konto</button>
+            </form>
+        </div>
+    </div>
+{{/register}}
+
