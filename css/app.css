@@ -7,6 +7,23 @@ a {
   a:hover {
     color: #85D538;
     text-decoration: none; }
+  a:active, a:focus {
+    text-decoration: none;
+    color: #333333; }
+
+.btn {
+  transition: all 0.5s; }
+  .btn:hover {
+    transition: all 0.5s; }
+
+.btn-light-green {
+  background-color: #85D538;
+  color: #fff;
+  font-size: 1.6rem;
+  padding: 5px 20px; }
+  .btn-light-green:hover {
+    color: #fff;
+    background-color: #F89406; }
 
 .navbar {
   margin-bottom: 70px; }
@@ -30,7 +47,7 @@ a {
       position: absolute;
       top: 58px;
       left: 130px; }
-  .navbar-collapse .panel-login {
+  .navbar-collapse .login {
     margin-top: 10px;
     margin-right: 17px;
     font-size: 1.6rem; }
@@ -44,5 +61,31 @@ a {
   margin-top: 20px; }
   .carousel-inner > .item > img {
     width: 100%; }
+
+.navbar.navbar-border {
+  border-bottom: solid 1px #F1F1F1;
+  min-height: 120px; }
+
+.panel-login .staff-login {
+  font-size: 1.8rem;
+  margin-bottom: 20px; }
+.panel-login .register,
+.panel-login .login {
+  color: #85D538;
+  font-size: 1.5rem;
+  float: right; }
+  .panel-login .register:hover,
+  .panel-login .login:hover {
+    color: #F89406; }
+.panel-login .btn-fb {
+  margin-bottom: 20px;
+  color: #fff;
+  background-color: #425F9C;
+  width: 100%; }
+
+.navbar-collapse .logged {
+  margin-top: 10px;
+  margin-right: 17px;
+  font-size: 1.6rem; }
 
 /*# sourceMappingURL=app.css.map */

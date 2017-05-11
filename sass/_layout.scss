@@ -10,4 +10,30 @@ a {
     color: #85D538;
     text-decoration: none;
   }
+
+  &:active,
+  &:focus {
+    text-decoration: none;
+    color: #333333;
+  }
+}
+
+.btn {
+  transition: all 0.5s;
+
+  &:hover {
+    transition: all 0.5s;
+  }
+}
+
+.btn-light-green {
+  background-color: #85D538;
+  color: #fff;
+  font-size: 1.6rem;
+  padding: 5px 20px;
+
+  &:hover {
+    color: #fff;
+    background-color: #F89406;
+  }
 }
