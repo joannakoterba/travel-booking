@@ -1,0 +1,51 @@
+.navbar {
+  margin-bottom: 70px;
+
+  &-default {
+    background-color: transparent;
+    border: none;
+
+    .navbar-brand,
+    .navbar-nav>li>a {
+      color: #333;
+    }
+
+    .navbar-brand:hover {
+      color: #85D538;
+      transition: all 0.5s;
+    }
+  }
+
+  &-brand {
+    margin-left: 30px;
+
+    img {
+      height: 85px;
+    }
+
+    .name {
+      font-family: 'Dancing Script', cursive;
+      font-size: 3.6rem;
+      margin-left: 20px;
+      position: absolute;
+      top: 58px;
+      left: 130px;
+    }
+  }
+
+  &-collapse {
+    .panel-login {
+      margin-top: 10px;
+      margin-right: 17px;
+      font-size: 1.6rem;
+    }
+  }
+
+  &-right {
+    position: absolute;
+    right: 35px;
+    top: 55px;
+    font-size: 1.7rem;
+  }
+}
+

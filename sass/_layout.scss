@@ -1,0 +1,13 @@
+body {
+  font-family: 'Lato', sans-serif;
+}
+
+a {
+  color: #333333;
+  transition: all 0.5s;
+
+  &:hover {
+    color: #85D538;
+    text-decoration: none;
+  }
+}

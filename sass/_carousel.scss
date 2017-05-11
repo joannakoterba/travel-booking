@@ -1,0 +1,9 @@
+.carousel {
+  margin-top: 20px;
+
+  &-inner {
+    > .item > img {
+      width: 100%;
+    }
+  }
+}
