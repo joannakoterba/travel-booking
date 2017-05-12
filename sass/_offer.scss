@@ -1,0 +1,47 @@
+.offer {
+  background-color: #F5F5F5;
+  padding: 100px;
+
+  img {
+    width: 100%;
+    margin-right: 10px;
+    border-radius: 5px;
+  }
+
+  &-box {
+    background-color: #fff;
+    margin-bottom: 30px;
+
+    &-desc {
+      padding: 20px 30px 17px;
+    }
+
+    .name-trip {
+      font-size: 1.8rem;
+      font-weight: 900;
+    }
+
+    .price-trip {
+      float: right;
+      font-size: 2.4rem;
+      line-height: 1;
+    }
+
+    .term-trip {
+      color: #AAAAAA;
+      font-weight: 700;
+      margin-top: 8px;
+
+      .days {
+        float: right;
+      }
+    }
+  }
+
+  .btn-orange {
+    //display: inline-block;
+    //margin: 0 auto;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
