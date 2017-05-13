@@ -6,8 +6,9 @@
     <link href="https://fonts.googleapis.com/css?family=Lato:400,700,900&amp;subset=latin-ext" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Dancing+Script&amp;subset=latin-ext" rel="stylesheet">
     <link href="node_modules/font-awesome/css/font-awesome.min.css" rel="stylesheet">
-    <link href="node_modules/bootstrap-datepicker/dist/css/bootstrap-datepicker.min.css" rel="stylesheet">
     <link href="node_modules/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="node_modules/bootstrap-datepicker/dist/css/bootstrap-datepicker.min.css" rel="stylesheet">
+    <link href="node_modules/select2/dist/css/select2.min.css" rel="stylesheet">
     <link href="css/app.css" rel="stylesheet">
 </head>
 <body>
@@ -60,6 +61,7 @@
     <div class="bg-img">
         <img src="img/bg-img.jpg">
     </div>
+
     <section class="panel-offer">
         <div class="container">
             <div class="row">
@@ -71,53 +73,64 @@
                                 <input type="text" class="form-control" id="inputDestination" placeholder="Kierunek">
                             </div>
                             <div class="input-group date form-group" data-provide="datepicker" data-date-format="dd.mm.yyyy">
-                                <input type="text" class="form-control" placeholder="Data wyjazdu">
+                                <input type="text" class="form-control" id="departureInput" placeholder="Data wyjazdu">
                                 <div class="input-group-addon">
                                     <span class="glyphicon glyphicon-calendar"></span>
                                 </div>
                             </div>
                             <div class="input-group date" data-provide="datepicker" data-date-format="dd.mm.yyyy">
-                                <input type="text" class="form-control" placeholder="Data przyjazdu">
+                                <input type="text" class="form-control" id="arrivalInput" placeholder="Data przyjazdu">
                                 <div class="input-group-addon">
                                     <span class="glyphicon glyphicon-calendar"></span>
                                 </div>
                             </div>
+                            <div class="line line-center line-orange"></div>
+                            <p class="search-box-text">Cena</p>
+                            <div class="row row-price">
+                                <div class="col-md-6 col-price">
+                                    <input type="text" class="form-control" value="" placeholder="od" id="min-price">
+                                </div>
+                                <div class="col-md-6 col-price">
+                                    <input type="text" class="form-control" value="" placeholder="do" id="max-price">
+                                </div>
+                            </div>
+                            <div class="line line-center line-orange"></div>
+                            <p class="search-box-text">Typ oferty</p>
+                            <div class="checkbox">
+                                <label>
+                                    <input type="checkbox" name="travelling" value="1"> objazdowe
+                                </label>
+                            </div>
+                            <div class="checkbox">
+                                <label>
+                                    <input type="checkbox" name="rest" value="1"> wypoczynek
+                                </label>
+                            </div>
+                            <button class="btn btn-orange btn-search">Szukaj</button>
                         </form>
-                        <div class="line line-center line-orange"></div>
-                        <p class="search-box-text">Cena</p>
-                        <div class="row row-price">
-                            <div class="col-md-6 col-price">
-                                <input type="text" class="form-control" value="" placeholder="od">
-                            </div>
-                            <div class="col-md-6 col-price">
-                                <input type="text" class="form-control" value="" placeholder="do">
-                            </div>
-                        </div>
-                        <div class="line line-center line-orange"></div>
-                        <p class="search-box-text">Typ oferty</p>
-                        <div class="checkbox">
-                            <label>
-                                <input type="checkbox"> objazdowe
-                            </label>
-                        </div>
-                        <div class="checkbox">
-                            <label>
-                                <input type="checkbox"> wypoczynek
-                            </label>
-                        </div>
-                        <button class="btn btn-orange">Szukaj</button>
                     </aside>
                 </div>
+                <div class="col-md-9">
+                    <div class="sort">
+                        <span>Sortuj wg:</span>
+                        <select class="select-sort without-search">
+                            <option value="price">ceny</option>
+                            <option value="name">nazwy</option>
+                        </select>
+
+                    </div>
+                    <div class="offers-list"></div>
+                </div>
             </div>
-            <div class="col-md-9">
-                <div class="offer-box"></div>
-            </div>
+            <ul id="pagination" class="pagination-sm"></ul>
         </div>
     </section>
     <script src="node_modules/jquery/dist/jquery.min.js"></script>
-    <script src="node_modules/jquery.cookie/jquery.cookie.js"></script>
-    <script src="node_modules/bootstrap-datepicker/dist/js/bootstrap-datepicker.min.js"></script>
+    <script src="node_modules/moment/min/moment.min.js"></script>
     <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+    <script src="node_modules/twbs-pagination/jquery.twbsPagination.min.js"></script>
+    <script src="node_modules/bootstrap-datepicker/dist/js/bootstrap-datepicker.min.js"></script>
+    <script src="node_modules/select2/dist/js/select2.min.js"></script>
     <script src="node_modules/mustache/mustache.min.js"></script>
     <script src="js/offer.js"></script>
 </body>
