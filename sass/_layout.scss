@@ -65,9 +65,20 @@ a {
   &-orange {
     background-color: #F89406;
   }
+
+  &-lg {
+    width: 200px;
+  }
 }
 
 .header-section {
   text-align: center;
   margin-top: 40px;
+}
+
+footer {
+  padding: 30px;
+  background-color: #F5F5F5;
+  text-align: center;
+  color: #85D538;
 }

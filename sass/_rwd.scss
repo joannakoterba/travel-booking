@@ -1,11 +1,94 @@
-@media (max-width: 768px) {
-  .nav > li > a {
+@media(max-width: 769px) {
+  html {
+    font-size: 6px;
+  }
+
+  .hamburger-menu {
+    button {
+      margin-top: 50px;
+    }
+  }
+
+  .navbar-right {
+    position: relative;
+    right: 0;
+    top: 0;
+    font-size: 2rem;
+  }
+
+  .navbar-default .navbar-nav>.open>a, .navbar-default .navbar-nav>.open>a:focus, .navbar-default .navbar-nav>.open>a:hover {
+    background-color: #85D538;
+  }
+
+  .carousel {
     display: none;
+  }
+
+  .carousel-box {
+
+    .row-without-margin {
+      margin: 0!important;
+    }
+
+    .search {
+      background-color: #85D538;
+      border-radius: 0;
+      margin-bottom: 100px;
+
+
+      .input-group {
+        display: block;
+      }
+
+      .form-group {
+        margin-bottom: 0;
+      }
+
+      .btn {
+        margin: 25px 0;
+        background-color: #F89406;
+      }
+
+      #priceTo {
+        margin-top: 0;
+      }
+    }
+  }
+
+  .navbar .navbar-brand {
+    padding: 15px 0;
+
+    .name {
+      margin-left: 0;
+    }
+  }
+
+  .offer {
+    margin-top: 350px;
+  }
+
+  .contact-data {
+    .icon-header {
+      font-size: 5rem;
+      margin-top: 20px;
+      margin-bottom: 10px;
+    }
+
+    .contact a {
+      font-size: 2.2rem;
+    }
+
+    .contact-header {
+      font-size: 2.2rem;
+    }
+
+    .hour {
+      font-size: 2rem;
+    }
+
+    .btn-light-green {
+      padding: 9px 20px;
+    }
   }
 }
 
-@media (min-width: 769px) {
-  .hamburger-menu {
-    display: none;
-  }
-}

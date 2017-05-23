@@ -1,0 +1,44 @@
+.contact-data {
+  padding: 100px 0 50px;
+
+  .icon-header {
+    font-size: 6rem;
+    color: #85D538;
+    margin-bottom: 20px;
+  }
+
+  .contact-header {
+    font-size: 1.6rem;
+    color: #85D538;
+    margin-top: 10px;
+  }
+
+  .contact a {
+    font-size: 1.8rem;
+  }
+
+  .contact-border-line {
+    border: 1px solid #F5F5F5;
+    margin-top: 50px;
+    margin-bottom: 30px;
+  }
+
+  .newsletter {
+
+    .form-group {
+      position: relative;
+      width: 100%;
+
+      .form-control {
+        width: 100%;
+        margin-top: 17px;
+      }
+
+      button {
+        position: absolute;
+        right: 0;
+        top: 0;
+      }
+    }
+  }
+}
