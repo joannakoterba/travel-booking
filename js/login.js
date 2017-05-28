@@ -6,7 +6,7 @@ $(document).ready(function () {
         FB.api('/me?fields=id,name,email', function(response) {
           var value = JSON.stringify(response);
           $.cookie("cookieData", value, {expires: 7});
-          window.location.href = "http://travelbook.dev/index.html";
+          window.location.href = "http://travel-booking.joannakoterba.pl";
         });
       }
     });
