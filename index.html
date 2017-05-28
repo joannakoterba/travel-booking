@@ -2,22 +2,30 @@
 <html lang="pl">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>TravelBook</title>
-    <link href="https://fonts.googleapis.com/css?family=Lato:400,700&amp;subset=latin-ext" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Lato:400,700,900&amp;subset=latin-ext" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Dancing+Script&amp;subset=latin-ext" rel="stylesheet">
     <link href="node_modules/font-awesome/css/font-awesome.min.css" rel="stylesheet">
     <link href="node_modules/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="node_modules/bootstrap-datepicker/dist/css/bootstrap-datepicker.min.css" rel="stylesheet">
     <link href="css/app.css" rel="stylesheet">
 </head>
 <body>
     <nav class="navbar navbar-default">
-        <div class="navbar-header">
+        <div class="navbar-header hamburger-menu">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse" aria-expanded="false">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
             <a class="navbar-brand" href="index.html">
                 <img src="img/logo.png">
                 <span class="name">Sun Holiday</span>
             </a>
         </div>
-        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse">
             <div class="login text-right">
                 <i class="fa fa-user" aria-hidden="true"></i>
                 <a href="login.html"><span>Zarejestruj się</span>
@@ -28,27 +36,19 @@
             <ul class="nav navbar-nav navbar-right">
                 <li><a href="index.html">Home</a></li>
                 <li class="dropdown">
-                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Oferty<span class="caret"></span></a>
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Oferty <span class="caret"></span></a>
                     <ul class="dropdown-menu">
-                        <li><a href="#">Action</a></li>
-                        <li><a href="#">Another action</a></li>
-                        <li><a href="#">Something else here</a></li>
+                        <li><a href="#">Egzotyka</a></li>
+                        <li><a href="#">Polska</a></li>
+                        <li><a href="#">Wypoczynek i zwiedzanie</a></li>
+                        <li><a href="#">Rejsy</a></li>
                     </ul>
                 </li>
                 <li class="dropdown">
-                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Promocje<span class="caret"></span></a>
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Promocje <span class="caret"></span></a>
                     <ul class="dropdown-menu">
-                        <li><a href="#">Action</a></li>
-                        <li><a href="#">Another action</a></li>
-                        <li><a href="#">Something else here</a></li>
-                    </ul>
-                </li>
-                <li class="dropdown">
-                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Bilety lotnicze<span class="caret"></span></a>
-                    <ul class="dropdown-menu">
-                        <li><a href="#">Action</a></li>
-                        <li><a href="#">Another action</a></li>
-                        <li><a href="#">Something else here</a></li>
+                        <li><a href="#">Happy Hours</a></li>
+                        <li><a href="#">Ostatnie miejsca</a></li>
                     </ul>
                 </li>
                 <li><a href="index.html">Last minute</a></li>
@@ -57,20 +57,270 @@
         </div>
     </nav>
 
-    <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
-        <div class="carousel-inner" role="listbox">
-            <div class="item active">
-                <img src="img/carousel/carousel_img.jpg">
-            </div>
-            <div class="item">
-                <img src="img/carousel/carousel_img2.jpg">
+    <div class="carousel-box">
+        <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
+            <div class="carousel-inner" role="listbox">
+                <div class="item active">
+                    <img src="img/carousel/carousel_img.jpg">
+                </div>
+                <div class="item">
+                    <img src="img/carousel/carousel_img2.jpg">
+                </div>
             </div>
         </div>
+        <form class="form search">
+            <div class="row-without-margin">
+                <div class="col-md-3 col-md-offset-1">
+                    <div class="form-group">
+                        <label class="header-input" for="destination">Kierunek</label>
+                        <input type="text" class="form-control input-seach" id="destination" placeholder="Kierunke podróży">
+                    </div>
+                </div>
+                <div class="col-md-2">
+                    <label class="header-input" for="departure">Data wyjazdu</label>
+                    <div class="form-group">
+                        <div class="input-group date" data-provide="datepicker" data-date-format="dd.mm.yyyy">
+                            <input type="text" class="form-control input-search" id="departure" placeholder="Data wyjazdu">
+                            <div class="input-group-addon">
+                                <span class="glyphicon glyphicon-calendar"></span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-2">
+                    <label class="header-input" for="arrival">Data przyjazdu</label>
+                    <div class="form-group input-group date" data-provide="datepicker" data-date-format="dd.mm.yyyy">
+                        <input type="text" class="form-control input-search" id="arrival" placeholder="Data przyjazdu">
+                        <div class="input-group-addon">
+                            <span class="glyphicon glyphicon-calendar"></span>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-2">
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="form-group form-price-from">
+                                <label class="header-input" for="priceFrom">Cena</label>
+                                <input type="text" class="form-control input-seach" id="priceFrom" placeholder="od">
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="form-group form-price-to">
+                                <input type="text" class="form-control input-seach" id="priceTo" placeholder="do">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-2">
+                    <button class="btn btn-light-green">Szukaj</button>
+                </div>
+            </div>
+        </form>
+
     </div>
 
 
+    <section class="offer">
+        <div class="container">
+            <h1 class="header-section">Najlepsze oferty</h1>
+            <div class="line line-center line-orange"></div>
+            <div class="row">
+                <div class="col-md-4">
+                   <div class="offer-box">
+                       <a href="#">
+                           <img src="img/offer/paris.jpg">
+                           <div class="overlay"></div>
+                       </a>
+                       <div class="offer-box-desc">
+                           <span class="name-trip">Paryż</span>
+                           <span class="price-trip">1500zł</span>
+                           <div class="term-trip">
+                               <span>21.05.2017 - 26.05.2017</span>
+                               <span class="days">5 dni</span>
+                           </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="offer-box">
+                        <a href="#">
+                            <img src="img/offer/london.jpg">
+                            <div class="overlay"></div>
+                        </a>
+                        <div class="offer-box-desc">
+                            <span class="name-trip">Londyn</span>
+                            <span class="price-trip">1750zł</span>
+                            <div class="term-trip">
+                                <span>17.05.2017 - 21.05.207</span>
+                                <span class="days">4 dni</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="offer-box">
+                        <a href="#">
+                            <img src="img/offer/italy.jpg">
+                            <div class="overlay"></div>
+                        </a>
+                        <div class="offer-box-desc">
+                            <span class="name-trip">Włochy</span>
+                            <span class="price-trip">2500zł</span>
+                            <div class="term-trip">
+                                <span>02.06.2017 - 08.06.2017</span>
+                                <span class="days">6 dni</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="offer-box">
+                        <a href="#">
+                            <img src="img/offer/greece.jpg">
+                            <div class="overlay"></div>
+                        </a>
+                        <div class="offer-box-desc">
+                            <span class="name-trip">Grecja</span>
+                            <span class="price-trip">2500zł</span>
+                            <div class="term-trip">
+                                <span>16.06.2017 - 23.06.2017</span>
+                                <span class="days">7 dni</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="offer-box">
+                        <a href="#">
+                            <img src="img/offer/thailand.jpg">
+                            <div class="overlay"></div>
+                        </a>
+                        <div class="offer-box-desc">
+                            <span class="name-trip">Tajlandia</span>
+                            <span class="price-trip">5500zł</span>
+                            <div class="term-trip">
+                                <span>20.05.2017 - 27.05.2017</span>
+                                <span class="days">7 dni</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="offer-box">
+                        <a href="#">
+                            <img src="img/offer/egypt.jpg">
+                            <div class="overlay"></div>
+                        </a>
+                        <div class="offer-box-desc">
+                            <span class="name-trip">Egipt</span>
+                            <span class="price-trip">1700zł</span>
+                            <div class="term-trip">
+                                <span>14.05.2017 - 24.05.2017</span>
+                                <span class="days">10 dni</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <a href="moreoffer.html">
+                <div class="text-center">
+                    <button class="btn btn-orange">Więcej ofert</button>
+                </div>
+            </a>
+        </div>
+    </section>
+    <section class="weather">
+        <div class="weather-box"></div>
+    </section>
+
+    <section class="contact-data">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4 text-center">
+                    <i class="fa fa-phone icon-header" aria-hidden="true"></i>
+                    <div class="contact">
+                        <a href="#">801 884 802</a>
+                    </div>
+                    <div class="contact-header">
+                        <p>Dział obsługi klienta</p>
+                    </div>
+                    <div class="hour">
+                        <p>poniedziałek-piątek: 07:00-20:00</p>
+                    </div>
+                    <div class="hour">
+                        <p>sobota-niedziela: 08:00-18:00</p>
+                    </div>
+                </div>
+                <div class="col-md-4 text-center">
+                    <i class="fa fa-map-marker icon-header" aria-hidden="true"></i>
+                    <div class="contact">
+                        <a href="#">ul.Testowa 234, 45-600 Test</a>
+                    </div>
+                    <div class="contact-header">
+                        <p>Biuro podróży</p>
+                    </div>
+                    <div class="hour">
+                        <p>poniedziałek-piątek: 10:00-18:00</p>
+                    </div>
+                    <div class="hour">
+                        <p>sobota: 09:00-14:00</p>
+                    </div>
+                    <div class="hour">
+                        <p>niedziela: nieczynne</p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="text-center">
+                        <i class="fa fa-envelope icon-header" aria-hidden="true"></i>
+                        <div class="contact">
+                            <a href="#">info@sunholiday.pl</a>
+                        </div>
+                    </div>
+                    <div class="contact-header">
+                        <p>Formularz kontaktowy</p>
+                    </div>
+                    <form class="form">
+                        <div class="form-group">
+                            <input type="email" class="form-control" id="inputEmail" placeholder="E-mail">
+                        </div>
+                        <div class="form-group">
+                            <input type="email" class="form-control" id="inputTitle" placeholder="Temat wiadomości">
+                        </div>
+                        <div class="form-group">
+                            <textarea class="form-control" rows="3" id="inputMessage" placeholder="Treść wiadomości"></textarea>
+                        </div>
+                        <div class="form-btn">
+                            <button type="submit" class="btn btn-light-green">Wyślij</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+        <div class="contact-border-line"></div>
+        <div class="container">
+            <div class="row newsletter">
+                <div class="col-md-4">
+                    <h3>Zapisz się do newslettera</h3>
+                </div>
+                <div class="col-md-7">
+                    <form class="form">
+                        <div class="form-group">
+                        <input type="email" class="form-control" id="inputEmailNewsletter" placeholder="E-mail">
+                        <button type="submit" class="btn btn-light-green">Zapisz się</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+    <footer>
+        &copy 2017 SunHoliday
+    </footer>
     <script src="node_modules/jquery/dist/jquery.min.js"></script>
     <script src="node_modules/jquery.cookie/jquery.cookie.js"></script>
+    <script src="node_modules/bootstrap-datepicker/dist/js/bootstrap-datepicker.min.js"></script>
     <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
     <script src="node_modules/mustache/mustache.min.js"></script>
     <script src="js/app.js"></script>

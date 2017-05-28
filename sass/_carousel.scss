@@ -1,9 +1,47 @@
-.carousel {
-  margin-top: 20px;
+.carousel-box {
+  position: relative;
 
-  &-inner {
-    > .item > img {
-      width: 100%;
+  .carousel {
+    margin-top: 80px;
+
+    &-inner {
+      > .item > img {
+        width: 100%;
+      }
     }
+  }
+
+  .search {
+    position: absolute;
+    top: 0;
+    background: rgba(252, 201, 128, 0.4);
+    border-radius: 5px;
+    width: 100%;
+
+    .form-group {
+      width: 100%;
+
+      .form-control {
+        width: 100%;
+      }
+    }
+    
+    .header-input {
+      font-size: 1.6rem;
+      text-transform: uppercase;
+      margin-top: 20px;
+      font-weight: 900;
+    }
+
+    .btn, #priceTo {
+      margin-top: 47px;
+    }
+  }
+
+  .header-input {
+      font-size: 1.6rem;
+      text-transform: uppercase;
+      margin-top: 20px;
+      font-weight: 900;
   }
 }

@@ -5,3 +5,53 @@
     font-size: 1.6rem;
   }
 }
+
+.offer {
+  &-box {
+    background-color: #fff;
+    margin-bottom: 30px;
+    border-radius: 5px;
+
+    img {
+      width:100%;
+      border-top-left-radius: 5px;
+      border-bottom-left-radius: 5px;
+    }
+
+    &-desc {
+      padding: 50px 40px;
+    }
+
+    .destination {
+      font-size: 2.5rem;
+      font-weight: 900;
+    }
+
+    .price {
+      float: right;
+      font-size: 2.4rem;
+      line-height: 1.5;
+      color: #F89406;
+      font-weight: 700;
+    }
+
+    .date-trip {
+      color: #AAAAAA;
+      font-weight: 700;
+      margin-bottom: 10px;
+    }
+
+    .rating {
+      font-size: 1.8rem;
+      i {
+        color: #F89406;
+        margin-bottom: 15px;
+        margin-right: 3px;
+      }
+    }
+
+    .desc-trip {
+      color: #AAAAAA;
+    }
+  }
+}

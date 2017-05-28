@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Oferty wycieczek</title>
+    <link href="https://fonts.googleapis.com/css?family=Lato:400,700,900&amp;subset=latin-ext" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Dancing+Script&amp;subset=latin-ext" rel="stylesheet">
+    <link href="node_modules/font-awesome/css/font-awesome.min.css" rel="stylesheet">
+    <link href="node_modules/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="node_modules/bootstrap-datepicker/dist/css/bootstrap-datepicker.min.css" rel="stylesheet">
+    <link href="node_modules/select2/dist/css/select2.min.css" rel="stylesheet">
+    <link href="css/app.css" rel="stylesheet">
+</head>
+<body>
+    <nav class="navbar navbar-default navbar-border">
+        <div class="navbar-header">
+            <a class="navbar-brand" href="index.html">
+                <img src="img/logo.png">
+                <span class="name">Sun Holiday</span>
+            </a>
+        </div>
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <div class="login text-right">
+                <i class="fa fa-user" aria-hidden="true"></i>
+                <a href="login.html"><span>Zarejestruj się</span>
+                    <span>/</span>
+                    <span>Zaloguj się</span>
+                </a>
+            </div>
+            <ul class="nav navbar-nav navbar-right">
+                <li><a href="index.html">Home</a></li>
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Oferty <span class="caret"></span></a>
+                    <ul class="dropdown-menu">
+                        <li><a href="#">Egzotyka</a></li>
+                        <li><a href="#">Polska</a></li>
+                        <li><a href="#">Wypoczynek i zwiedzanie</a></li>
+                        <li><a href="#">Rejsy</a></li>
+                    </ul>
+                </li>
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Promocje <span class="caret"></span></a>
+                    <ul class="dropdown-menu">
+                        <li><a href="#">Happy Hours</a></li>
+                        <li><a href="#">Ostatnie miejsca</a></li>
+                    </ul>
+                </li>
+                <li><a href="index.html">Last minute</a></li>
+                <li><a href="index.html">Kontakt</a></li>
+            </ul>
+        </div>
+    </nav>
+    <div class="bg-img">
+        <img src="img/bg-img.jpg">
+    </div>
+
+    <section class="panel-offer">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-3">
+                    <aside class="search-box">
+                        <p class="search-box-text">Wyszukaj ofertę</p>
+                        <form class="form-search" method="post">
+                            <div class="form-group">
+                                <input type="text" class="form-control" id="inputDestination" placeholder="Kierunek">
+                            </div>
+                            <div class="input-group date form-group" data-provide="datepicker" data-date-format="dd.mm.yyyy">
+                                <input type="text" class="form-control" id="departureInput" placeholder="Data wyjazdu">
+                                <div class="input-group-addon">
+                                    <span class="glyphicon glyphicon-calendar"></span>
+                                </div>
+                            </div>
+                            <div class="input-group date" data-provide="datepicker" data-date-format="dd.mm.yyyy">
+                                <input type="text" class="form-control" id="arrivalInput" placeholder="Data przyjazdu">
+                                <div class="input-group-addon">
+                                    <span class="glyphicon glyphicon-calendar"></span>
+                                </div>
+                            </div>
+                            <div class="line line-center line-orange"></div>
+                            <p class="search-box-text">Cena</p>
+                            <div class="row row-price">
+                                <div class="col-md-6 col-price">
+                                    <input type="text" class="form-control" value="" placeholder="od" id="min-price">
+                                </div>
+                                <div class="col-md-6 col-price">
+                                    <input type="text" class="form-control" value="" placeholder="do" id="max-price">
+                                </div>
+                            </div>
+                            <div class="line line-center line-orange"></div>
+                            <p class="search-box-text">Typ oferty</p>
+                            <div class="checkbox">
+                                <label>
+                                    <input type="checkbox" name="travelling" value="1"> objazdowe
+                                </label>
+                            </div>
+                            <div class="checkbox">
+                                <label>
+                                    <input type="checkbox" name="rest" value="1"> wypoczynek
+                                </label>
+                            </div>
+                            <button class="btn btn-orange btn-search">Szukaj</button>
+                        </form>
+                    </aside>
+                </div>
+                <div class="col-md-9">
+                    <div class="sort">
+                        <span>Sortuj wg:</span>
+                        <select class="select-sort without-search">
+                            <option value="price">ceny</option>
+                            <option value="name">nazwy</option>
+                        </select>
+
+                    </div>
+                    <div class="offers-list"></div>
+                </div>
+            </div>
+            <div class="text-right">
+                <ul id="pagination" class="pagination-sm"></ul>
+            </div>
+        </div>
+    </section>
+    <script src="node_modules/jquery/dist/jquery.min.js"></script>
+    <script src="node_modules/moment/min/moment.min.js"></script>
+    <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+    <script src="node_modules/twbs-pagination/jquery.twbsPagination.min.js"></script>
+    <script src="node_modules/bootstrap-datepicker/dist/js/bootstrap-datepicker.min.js"></script>
+    <script src="node_modules/select2/dist/js/select2.min.js"></script>
+    <script src="node_modules/mustache/mustache.min.js"></script>
+    <script src="js/filterAndSort.js"></script>
+    <script src="js/offer.js"></script>
+</body>
+</html>

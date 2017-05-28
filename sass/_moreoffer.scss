@@ -1,0 +1,59 @@
+.navbar-border {
+  margin-bottom: 0;
+}
+
+.bg-img {
+  img {
+    width: 100%;
+  }
+}
+
+.panel-offer {
+  background-color: #F5F5F5;
+  padding: 100px;
+
+  .search-box {
+    background-color: #fff;
+    border-radius: 5px;
+    padding: 40px 35px;
+
+    &-text {
+      text-transform: uppercase;
+      font-size: 1.8rem;
+      font-weight: 700;
+      margin-bottom: 20px;
+    }
+
+    .form-group {
+      margin-bottom: 9px;
+    }
+
+    .line-orange {
+      height: 1px;
+      width: 190px;
+      margin-bottom: 30px;
+    }
+
+    .btn-orange {
+      margin-top: 20px;
+    }
+  }
+  .sort {
+    margin-bottom: 20px;
+  }
+
+  .pagination .last,
+  .pagination .first {
+    display: none;
+  }
+
+  .pagination>.active>a, .pagination>.active>a:focus, .pagination>.active>a:hover, .pagination>.active>span, .pagination>.active>span:focus, .pagination>.active>span:hover {
+    background-color: #F89406;
+    border-color: #F89406;
+    color: #fff;
+  }
+  .pagination > li > a, .pagination > li > span {
+    color: #333;
+  }
+}
+
