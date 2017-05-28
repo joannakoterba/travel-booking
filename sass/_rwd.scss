@@ -16,8 +16,25 @@
     font-size: 2rem;
   }
 
+  .navbar-collapse {
+    .login {
+      text-align: left;
+      margin-top: 26px;
+      font-size: 2rem;
+    }
+    
+    .logged {
+      text-align: left;
+      font-size: 2rem;
+    }
+  }
+
   .navbar-default .navbar-nav>.open>a, .navbar-default .navbar-nav>.open>a:focus, .navbar-default .navbar-nav>.open>a:hover {
     background-color: #85D538;
+  }
+
+  .navbar-default .navbar-collapse, .navbar-default .navbar-form {
+    border: none;
   }
 
   .carousel {
@@ -51,6 +68,10 @@
 
       #priceTo {
         margin-top: 0;
+      }
+
+      .input-group-addon {
+        display:none;
       }
     }
   }
@@ -91,4 +112,3 @@
     }
   }
 }
-

@@ -21,20 +21,27 @@
     .form-group {
       width: 100%;
 
-      label {
-        font-size: 1.6rem;
-        text-transform: uppercase;
-        margin-top: 20px;
-        font-weight: 900;
-      }
-
       .form-control {
         width: 100%;
       }
+    }
+    
+    .header-input {
+      font-size: 1.6rem;
+      text-transform: uppercase;
+      margin-top: 20px;
+      font-weight: 900;
     }
 
     .btn, #priceTo {
       margin-top: 47px;
     }
+  }
+
+  .header-input {
+      font-size: 1.6rem;
+      text-transform: uppercase;
+      margin-top: 20px;
+      font-weight: 900;
   }
 }
